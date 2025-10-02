@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        header{
+            margin-bottom: 100px;
+        }
+        h1 {
+            color: #333;
+            font-family: Arial, sans-serif;
+            margin: 10px 10px 10px 30px;
+        }
+        #line{
+            border-bottom: 2px solid #333;
+        }
+        main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .text{
+            font-size: 30px;
+        }        
+        @keyframes blink {
+         to {
+            opacity: 0;
+            }
+        }
+        .blink{
+            border-right: 2px solid black;
+            animation: blink 0.5s infinite;
+            font-size: 25px;
+        }
+
+    </style>
+    
+    <header>
+        <h1>Portfolio</h1>
+        <div id="line"></div>
+    </header>
+    <main>
+        <span class="text"></span>
+        <span class="blink">&nbsp;</span>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

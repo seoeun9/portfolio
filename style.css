@@ -1,0 +1,194 @@
+body {
+    position: relative;
+    font-family: 'Arial', sans-serif;
+    background: #ffffff; /* 완전 흰색 */
+    color: #333;
+}
+
+/* 헤더 */
+header {
+    padding: 40px 20px;
+    background: #ffffff;
+    text-align: center;
+    transition: opacity 0.3s ease-out;
+}
+header img {
+    width: 157px;
+    height: 137px;
+    margin-top: 60px;
+}
+h1 {
+    font-family: sans-serif;
+    font-size: 4rem;
+    letter-spacing: -0.04rem;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-weight: 800;
+}
+.header-detail {
+    padding: 5px;
+    font-size: 1rem;
+    font-family: 'sans-serif';
+    font-weight: 700;
+    margin-top: 15px;
+    color: black;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+/* 스크롤 시 텍스트 사라짐 */
+.header-text.hide {
+    opacity: 0;
+    transform: translateY(-50px);
+}
+
+/* 네비게이션 */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* 기존 margin-top: 30px 대신 padding 사용 (고정 시 레이아웃 안정화) */
+    padding-top: 30px; 
+    
+    /* ⭐ 수정: Sticky 속성 적용 ⭐ */
+    position: sticky; 
+    top: 0; 
+    width: 100%;
+    
+    /* 스크롤 시 아래 내용이 비치지 않도록 흰색 배경 필수 */
+    background: #ffffff; 
+    z-index: 1000;
+}
+button {
+    background: #e6e6e6;
+    color: black;
+    border: 1px solid #e6e6e6;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+button:hover {
+    background: #ff7060;
+    color: white;
+    border: #ff7060 solid 1px;
+}
+button.active {
+    background: black;
+    color: white;
+    border: 1px solid black;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+button.active:hover {
+    background: #ff7060;
+    color: white;
+    border: 1px solid #ff7060;
+}
+
+main {
+    display: flex;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin-top: 50px;
+    margin: 50px auto 0;
+    justify-content: center;
+    align-items: center;
+}
+.brief-1 {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.brief-1 img {
+    border-radius: 60px;
+    opacity: 72%;
+}
+.overlay-text {
+    position: absolute;
+    font-family: sans-serif;
+    font-weight: bold; 
+    top: 73%;
+    left: 27%;
+    transform: translate(-50%, -50%); /* 정확한 중앙 정렬을 위한 조정 */
+    
+    color: white; 
+    font-size: 2rem;
+    z-index: 10; /* 이미지가 텍스트를 가리지 않도록 */
+}
+.overlay-card {
+    position: absolute;
+    top: 75%;
+    left: 57%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 30px 40px; 
+    border-radius: 40px;
+    text-align: left; 
+    z-index: 10;
+    height: 450px;
+    width: 600px;
+    backdrop-filter: blur(8px); /* ⭐ 배경 흐림 효과 추가 ⭐ */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* 테두리 추가 */
+}
+
+.overlay-card .section-title {
+    color: #ff7060; /* 이미지 속 빨간색 강조 느낌 */
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* 일반 텍스트 여백 */
+.overlay-card p {
+    margin-bottom: 50px;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.project-title {
+    /* 스크롤을 유발하기 위한 충분한 하단 여백 추가 */
+    padding-bottom: 800px; 
+    padding-top: 150px; 
+    
+    text-align: center;
+    font-size: 3rem; 
+    font-weight: bold;
+    color: #333;
+}
+
+/* 별 효과 스타일 */
+.star-effect {
+    position: absolute;
+    font-size: 1.5rem;
+    color: gold;
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(0);
+    animation: star-burst 0.8s ease-out forwards;
+    z-index: 99999;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.7);
+}
+
+/* 별 애니메이션 키프레임 */
+@keyframes star-burst {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(0.5); /* 시작 시 약간 작게 */
+    }
+    20% {
+        transform: translate(var(--x), var(--y)) scale(1.2); /* 튕겨나가면서 커짐 */
+    }
+    100% {
+        opacity: 0;
+        transform: translate(calc(var(--x) * 2), calc(var(--y) * 2)) scale(0); /* 멀리 사라지며 작아짐 */
+   }
+}

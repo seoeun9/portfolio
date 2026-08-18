@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Noto_Sans_KR, Space_Grotesk } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 
-const displayFont = Space_Grotesk({
+const displayFont = Manrope({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["500", "700"],
+  weight: ["500", "700", "800"],
 });
 
-const bodyFont = Noto_Sans_KR({
+const bodyFont = Manrope({
   variable: "--font-body",
   subsets: ["latin"],
   weight: ["400", "500", "700"],

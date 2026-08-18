@@ -25,7 +25,7 @@ const backgroundItems = [
     title: "SQLD",
     description: "한국데이터산업진흥원",
     secondaryTitle: "정보처리기사",
-    secondaryDescription: "이제 진짜 할거임",
+    secondaryDescription: "진짜 할거임",
   },
 ];
 

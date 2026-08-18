@@ -25,7 +25,7 @@ export default function Home() {
       ],
     },
     {
-      title: "Moss Hexa & Moss Echo Renewal",
+      title: "Moss Hexa & Moss Echo",
       role: "Frontend, Backend",
       result:
         "IoT 기기와 연동되는 앱의 프론트엔드와 백엔드를 담당해 실사용자의 피드백을 반영한 UI/UX 개선과 기능 구현을 진행했습니다.",

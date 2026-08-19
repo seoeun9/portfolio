@@ -38,10 +38,13 @@ export default function Home() {
       ],
       links: [
         {
-          label: "서비스 보기",
+          label: "서비스 보기 1",
+          href: "https://apps.apple.com/kr/app/moss-echo/id6740687971",
+        },
+        {
+          label: "서비스 보기 2",
           href: "https://apps.apple.com/kr/app/moss-hexa/id6761811728",
         },
-        // { label: "GitHub", href: "https://github.com" },
       ],
     },
     {
